@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voir le fichier</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    iframe { width: 100%; height: 80vh; border: 1px solid #ccc; margin-top: 20px; }
+    .actions { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Contenu du fichier</h1>
+
+  <div class="actions">
+    <a id="download-link" href="#" download>Télécharger le fichier</a><br><br>
+    <a href="./dashboard.html">⬅ Retour au tableau de bord</a>
+  </div>
+
+  <iframe id="file-viewer" src="" style="display:none;"></iframe>
+  <p id="message" style="margin-top:20px;"></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    let fichierPath = params.get("fichier");
+
+    const iframe = document.getElementById("file-viewer");
+    const downloadLink = document.getElementById("download-link");
+    const message = document.getElementById("message");
+
+    if (!fichierPath) {
+      message.textContent = "Fichier non spécifié.";
+    } else {
+      // Normaliser le chemin : s'assurer que ça commence par /uploads/
+      if (!fichierPath.startsWith('/uploads/')) {
+        if (fichierPath.startsWith('/')) {
+          fichierPath = '/uploads' + fichierPath;
+        } else {
+          fichierPath = '/uploads/' + fichierPath;
+        }
+      }
+
+      const fileUrl = `http://localhost:3000${fichierPath}`;
+
+      console.log("URL fichier demandée :", fileUrl);
+
+      // Lien de téléchargement
+      downloadLink.href = fileUrl;
+
+      fetch(fileUrl, { method: 'HEAD' })
+        .then(res => {
+          if (!res.ok) throw new Error("Fichier introuvable");
+
+          const contentType = res.headers.get("Content-Type");
+          console.log("Type MIME :", contentType);
+
+          // Afficher le fichier uniquement s'il est PDF ou image
+          if (contentType && (contentType.includes("pdf") || contentType.startsWith("image/"))) {
+            iframe.src = fileUrl;
+            iframe.style.display = 'block';
+            message.textContent = "";
+          } else {
+            message.innerHTML = `
+              Ce type de fichier ne peut pas être affiché.<br>
+              <a href="${fileUrl}" target="_blank" rel="noopener">👉 Cliquez ici pour ouvrir le fichier dans un nouvel onglet</a>
+            `;
+          }
+        })
+        .catch(err => {
+          console.error("Erreur lors du chargement du fichier :", err);
+          message.textContent = "Erreur lors du chargement du fichier.";
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APUDEP - Protection & Développement des Patrimoines</title>
+  <link rel="stylesheet" href="/asset/css/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo-apudep.png" type="image/png" />
+</head>
+<body>
+
+  <!-- En-tête : Logo + Menu -->
+  <header class="header">
+    <div class="logo1">
+      <img src="/asset/images/logo.png" alt="Logo APUDEP" />
+      <div class="logo-text">
+        <h1>APUDEP</h1>
+        <p>Action Unies pour la Protection et le Développement des Patrimoines</p>
+      </div>
+    </div>
+
+    <!-- Menu principal -->
+    <nav class="main-nav">
+      <ul class="nav-menu">
+        <li><a href="#accueil" class="active">Accueil</a></li>
+        <li><a href="#actualites">Actualités</a></li>
+        <li class="dropdown">
+          <a href="#qui-sommes-nous">Qui sommes-nous ?</a>
+          <ul class="dropdown-menu">
+            <li><a href="#creation">Création</a></li>
+            <li><a href="#objectifs">Objectifs</a></li>
+            <li><a href="#experiences">Expériences</a></li>
+            <li><a href="#domaines">Domaines d’intervention</a></li>
+            <li><a href="#zone">Zone d’intervention</a></li>
+            <li><a href="#organes">Organes de décision</a></li>
+            <li><a href="#temoignages">Témoignages</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Nous contacter</a></li>
+       <!-- ✅ Lien vers la page de connexion admin -->
+       
+    <!-- ✅ Bouton de connexion admin -->
+    
+    
+    
+    
+  </ul>
+</nav>
+
+<!-- Hamburger mobile -->
+<div class="hamburger" id="hamburger">☰</div>
+  </header>
+  
+  <!-- Carrousel Héros -->
+  <section class="carousel-container">
+    <div class="carousel">
+      <img src="asset/images/union.png" alt="Sensibilisation" class="carousel-img" />
+      <img src="asset/images/communaute.png" alt="Reboisement" class="carousel-img active" />
+      <img src="asset/images/slide3.png" alt="Équipe APUDEP" class="carousel-img" />
+    </div>
+    <div class="carousel-content">
+      <h2 class="animate-fade-in">Protéger notre patrimoine, bâtir notre avenir</h2>
+      <p class="animate-fade-in-delay">Engagés pour l’environnement, la citoyenneté et le développement durable en Guinée.</p>
+      <div class="carousel-buttons">
+        <a href="#qui-sommes-nous" class="btn-primary">Découvrir</a>
+        <a href="#contact" class="btn-secondary">Nous contacter</a>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+    </div>
+  </section>
+  
+  <!-- Section Accueil -->
+  <section id="accueil" class="section active">
+    <h2>Bienvenue à APUDEP</h2>
+    <div class="presentation-flex">
+      <div class="presentation-img animate-slide-left">
+        <img src="asset/images/logo.png" alt="Activité terrain" />
+      </div>
+      <div class="presentation-text animate-slide-right">
+        <p>L'ONG APUDEP œuvre depuis 2014 pour la protection de l’environnement, la promotion de la citoyenneté et le développement durable en Guinée.</p>
+        <p>Nous agissons à travers des projets concrets dans les domaines de l’assainissement, de l’éducation citoyenne, de la santé communautaire et de la préservation du patrimoine culturel et naturel.</p>
+        <p>Notre force ? Un réseau de professionnels engagés répartis dans les préfectures de Mamou, Dalaba et Pita.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Actualités -->
+  <!-- Actualités -->
+  <section id="actualites" class="section">
+    <h2>Actualités</h2>
+    <div class="news-container">
+      <div class="news-item animate-card">
+        <img src="asset/images/reboisement.jpg" alt="Campagne de reboisement" class="news-img" />
+      <div class="news-content">
+        <h4>[20 Avril 2025] Campagne de reboisement à Dalaba</h4>
+        <p>5 000 arbres plantés avec la participation des jeunes et des autorités locales.</p>
+      </div>
+    </div>
+    <div class="news-item animate-card">
+      <img src="asset/images/sensibilisation.jpg" alt="Sensibilisation déchets plastiques" class="news-img" />
+      <div class="news-content">
+        <h4>[15 Avril 2025] Sensibilisation sur les déchets plastiques</h4>
+        <p>Ateliers organisés dans 10 écoles primaires de la région de Mamou.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Afficher les détails-->
+<section id="news-details" class="section" style="display: none;">
+  <button id="close-details">✖ Fermer</button>
+  <div class="news-details-content">
+    <h2 id="details-title"></h2>
+    <img id="details-image" src="" alt="Image">
+    <p id="details-content"></p>
+  </div>
+</section>
+
+
+
+
+<!-- Section Témoignages -->
+<section id="temoignages" class="section">
+  <h2>Témoignages vidéo</h2>
+  <p style="text-align: center; color: #555; margin-bottom: 40px;">
+    Découvrez les retours authentiques de nos bénéficiaires, volontaires et partenaires.
+  </p>
+  
+  <div class="testimonials-grid">
+    <!-- Témoignage 1 -->
+    <div class="testimonial-item animate-card">
+      <h4>Témoignage d’un jeune formé</h4>
+      <p>"Grâce à la formation en leadership, j’ai lancé mon propre projet de recyclage dans mon quartier. APUDEP m’a donné les outils pour agir." – Mariam, 22 ans, Dalaba</p>
+      <div class="video-container" style="margin-top: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <video width="100%" height="220" controls style="background: #000;">
+          <source src="asset/videos/temoignage1.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+    </div>
+
+    <!-- Témoignage 2 -->
+    <div class="testimonial-item animate-card">
+      <h4>Témoignage d'une villageoise</h4>
+      <p>"Avant, nous marchions 3 km pour trouver de l’eau. Aujourd’hui, grâce au forage, nous avons de l’eau propre à côté de chez nous." – Fatoumata, Pita</p>
+      <div class="video-container" style="margin-top: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <video width="100%" height="220" controls style="background: #000;">
+          <source src="asset/videos/temoignage2.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+    </div>
+    
+    <!-- Témoignage 3 -->
+    <div class="testimonial-item animate-card">
+      <h4>Témoignage d’un enseignant</h4>
+      <p>"Les élèves sont devenus des ambassadeurs du propre. Les ateliers ont changé leur regard sur l’environnement."</p>
+      <div class="video-container" style="margin-top: 15px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <video width="100%" height="220" controls style="background: #000;">
+          <source src="asset/videos/temoignage3.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Qui sommes-nous -->
+<section id="qui-sommes-nous" class="section">
+  <h2>Qui sommes-nous ?</h2>
+  
+  <!-- Logo avec cadre rond -->
+  <div class="logo-container">
+      <img src="/asset/images/logo.png" alt="Logo APUDEP" class="logo" />
+    </div>
+    
+    <p class="animate-fade-in description">
+      APUDEP est une ONG guinéenne composée de professionnels engagés : ingénieurs, enseignants, médecins, animateurs communautaires, etc.
+    </p>
+    <p class="effectif">
+      <strong>Effectif :</strong> 49 membres dont 37 actifs dans les préfectures de Mamou, Dalaba et Pita.
+    </p>
+  </section>
+  
+  <!-- Création de l'ONG -->
+  <section id="creation" class="section">
+    <h2>Création de l'ONG</h2>
+    
+    <!-- Logo rond centré -->
+    <div class="logo-container">
+      <img src="/asset/images/logo.png" alt="Logo APUDEP" class="logo" />
+    </div>
+    
+    <!-- Informations -->
+    <div class="creation-content animate-fade-in">
+      <ul style="max-width: 600px; margin: 30px auto; text-align: left; line-height: 1.8;">
+        <li><strong>Date de création :</strong> 1er septembre 2014</li>
+        <li><strong>Agrément régional :</strong> 5 octobre 2017</li>
+        <li><strong>Numéro d'agrément :</strong> N°304/RAM/CAB/DNS/2017</li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- Nos Objectifs -->
+  <section id="objectifs" class="section">
+    <h2>Nos Objectifs</h2>
+    
+    <!-- Logo rond centré -->
+    <div class="logo-container">
+      <img src="/asset/images/logo.png" alt="Logo APUDEP" class="logo" />
+    </div>
+    
+    <!-- Objectifs -->
+    <div class="objectifs-content animate-fade-in" style="max-width: 800px; margin: 30px auto; text-align: left; line-height: 1.8; color: #444;">
+      <p><strong>But :</strong> Contribuer à la protection et au développement de nos patrimoines de tout genre.</p>
+      <p><strong>Vision :</strong> Un pays où chaque Guinéen cultive le patriotisme, la citoyenneté et respecte l’environnement.</p>
+      <p><strong>Valeurs :</strong> Ouverture, innovation, transparence, intégrité, unité sociale.</p>
+    </div>
+  </section>
+  
+  <!-- Section Nos Expériences et Partenaires -->
+  <section id="experiences" class="section active">
+    <h2>Nos expériences & partenaires</h2>
+    
+    <!-- Expériences avec image à gauche, texte à droite -->
+    <div class="experiences-container">
+      
+      <!-- Projet 1 : Reboisement -->
+      <div class="experience-item">
+        <img src="asset/images/reboisement.jpg" alt="Projet de reboisement" class="experience-img" />
+        <div class="experience-content">
+          <h3>Reboisement des zones dégradées</h3>
+          <p>
+            Depuis 2020, APUDEP mène des actions de reboisement dans les régions du Centre et de l’Ouest du Cameroun. 
+            Plus de 10 000 arbres ont été plantés en collaboration avec les communautés locales, 
+            contribuant à la restauration des écosystèmes et à la lutte contre l’érosion des sols.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Projet 2 : Assainissement -->
+    <div class="experience-item">
+      <img src="asset/images/assainissement.jpg" alt="Campagne d'assainissement" class="experience-img" />
+      <div class="experience-content">
+        <h3>Assainissement des quartiers urbains</h3>
+        <p>
+          Nous menons des campagnes régulières de nettoyage dans les quartiers populaires de Douala et Yaoundé. 
+          Des tonnes de déchets sont collectées, accompagnées de sensibilisation pour promouvoir un environnement propre.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Projet 3 : Formation des jeunes -->
+    <div class="experience-item">
+      <img src="asset/images/formation-jeunes.jpg" alt="Formation des jeunes" class="experience-img" />
+      <div class="experience-content">
+        <h3>Formation des jeunes au leadership</h3>
+        <p>
+          Plus de 500 jeunes formés aux compétences de leadership, gestion de projet et entrepreneuriat social. 
+          Ces ateliers leur permettent de devenir des acteurs du développement durable dans leurs communautés.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Projet 4 : Sensibilisation à la gouvernance -->
+    <div class="experience-item">
+      <img src="asset/images/gouvernance.jpg" alt="Sensibilisation à la gouvernance" class="experience-img" />
+      <div class="experience-content">
+        <h3>Sensibilisation à la bonne gouvernance</h3>
+        <p>
+          À travers des dialogues citoyens et des ateliers, nous formons les jeunes et les femmes à la transparence, 
+          à la participation citoyenne et à la reddition des comptes dans la gestion des affaires publiques.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <!-- Partenaires -->
+  <div class="partners-section" style="margin-top: 60px; text-align: center;">
+    <p><strong>Nos partenaires :</strong> UNICEF, PNUD, Union Européenne, OIM</p>
+    <div class="partners-logos">
+      <img src="asset/images/unicef.png" alt="UNICEF" />
+      <img src="asset/images/PNUD.jpeg" alt="PNUD" />
+      <img src="asset/images/ue.png" alt="Union Européenne" />
+      <img src="asset/images/oim.png" alt="OIM" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- Afficher les expériences au clic -->
+
+  <section id="experience-details" class="section" style="display: none;">
+    <button id="close-experience-details">✖ Fermer</button>
+    <div class="news-details-content">
+      <h2 id="experience-title"></h2>
+      <img id="experience-image" src="" alt="Image expérience">
+      <p id="experience-description"></p>
+    </div>
+  </section>
+  
+
+
+<section id="domaines" class="section">
+  <h3>Domaines d'intervention</h3>
+  <ul class="domaines-list">
+    <li>Protection des Patrimoines</li>
+    <li>Environnement, Eau, Hygiène</li>
+    <li>Assainissement et Reboisement</li>
+    <li>Développement Rural</li>
+    <li>Santé publique</li>
+    <li>Emploi Jeune</li>
+    <li>Éducation Citoyenne</li>
+    <li>Développement Durable</li>
+    <li>Santé, Arts, Sports, Culture</li>
+    <li>Assistance aux démunis</li>
+    <li>Loisirs</li>
+    <li>Formation</li>
+    <li>Sensibilisation</li>
+    <li>Droits des femmes et enfants</li>
+    <li>Lutte contre l'exode rural</li>
+    <li>Bonne gouvernance</li>
+  </ul>
+</section>
+
+<section id="zone" class="section">
+  <h3>Zone d'intervention</h3>
+  <p><strong>Région Administrative de Mamou</strong></p>
+  <p>Préfectures : Mamou, Dalaba ,Pita</p>
+  <div class="zone-photos">
+    <img src="asset/images/carte-mamou.png" alt="Carte de la région de Mamou" style="max-width: 100%; height: auto;" />
+    <img src="asset/images/dalaba.png" alt="Carte de la préfecture de Dalaba" style="max-width: 100%; height: auto;" />
+    <img src="asset/images/pita.png" alt="Carte de la préfecture de Pita" style="max-width: 100%; height: auto;" />
+  </div>
+</section>
+
+<!-- Mot du Président -->
+
+<!-- Organe de décision -->
+<section id="organe-decision" class="section">
+  <h3>Organe de décision</h3>
+  <div class="decision-team">
+    <div class="decision-member">
+      <img src="asset/images/president.png" alt="Président" />
+      <div class="decision-desc">
+        <h4>Dr. Alpha Sow</h4>
+        <p>Président de l’ONG APUDEP</p>
+      </div>
+    </div>
+    <div class="decision-member">
+      <img src="asset/images/vice-president.png" alt="Vice-Président" />
+      <div class="decision-desc">
+        <h4>Mme Mariama Diallo</h4>
+        <p>Vice-Présidente</p>
+      </div>
+    </div>
+    <!-- Ajoute d'autres membres ici -->
+  </div>
+</section>
+<section class="welcome-section">
+  <div class="welcome-img animate-float">
+    <img src="asset/images/president.png" alt="Président APUDEP" />
+  </div>
+  <div class="welcome-text animate-slide-up">
+    <h3>Mot du Président</h3>
+    <p>Bienvenue au sein de <strong>l’ONG APUDEP</strong>, <strong>votre ONG pour la protection et le développement des patrimoines . Avec vous et nous ensemble,</strong> nous œuvrons avec passion et dévouement pour une citoyenneté plus active accès à un développement durable, avec une protection plus rapprochée de l’ensemble de nos patrimoines ;<strong> qu’il soit humain, bâti, public/privé, naturel, historique ou culturel.</strong>
+      Notre vision est de rendre nos patrimoines plus valeureux, attractifs et protégés. Chaque action, chaque œuvre, chaque projet est une pierre posée, une opportunité pour bâtir <strong>une Guinée prospère</strong>, plus verte et juste autour de la défense, de la protection et du développement des patrimoines.  
+      Pour impacter le maximum de bénéficiaires,<strong> l’ONG APUDEP</strong> prendra appui sur <strong>les Partenaires Techniques et Financiers</strong> ainsi qu’avec les structures étatiques qu’elle s’efforcera de rendre plus visibles à travers les actions de mise à échelle de capitalisation sur les acquis.
+      Nous osons espérer que vous serez intéressé de partenariat avec <strong> l’ONG APUDEP</strong> autant qu’elle est disposée à une collaboration fructueuse pour toutes les parties. <br>
+
+      <strong>Le Président</strong></p>
+    </div>
+  </section>
+  
+  <!-- Section Organes de décision -->
+  <section class="section" id="organes">
+    <h2>Organes de Décision</h2>
+    <p style="text-align: center; margin-bottom: 50px; color: #555; max-width: 800px; margin-left: auto; margin-right: auto;">
+      Découvrez les responsables principaux des organes de gouvernance d'APUDEP, au cœur de la stratégie, de l'exécution et de la transparence de l'ONG.
+    </p>
+    
+    <!-- Grille horizontale -->
+    <div class="governance-grid">
+      
+      <!-- Conseil d'Administration -->
+      <div class="governance-card">
+        <div class="card-header">
+          <h3>Conseil d'Administration</h3>
+          <p class="org-type">Organe stratégique</p>
+        </div>
+        <div class="card-body">
+          <img src="/asset/images/conseil.png" alt="Dr. Amadou Diallo" />
+          <h4>Dr. Amadou Diallo</h4>
+          <p class="role">Président du Conseil</p>
+          <p class="bio">
+            Médecin de formation et fondateur de l'ONG, il définit la vision stratégique d'APUDEP. 
+            Il veille à l’alignement des actions avec les politiques nationales.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Bureau Exécutif -->
+      <div class="governance-card">
+        <div class="card-header">
+          <h3>Bureau Exécutif</h3>
+          <p class="org-type">Organe opérationnel</p>
+        </div>
+        <div class="card-body">
+          <img src="/asset/images/agronome.png" alt="Mamadou Sow" />
+          <h4>Mamadou Sow</h4>
+          <p class="role">Directeur Exécutif</p>
+          <p class="bio">
+            Ingénieur agronome, il coordonne toutes les activités terrain à Mamou, Dalaba et Pita. 
+            Il assure le suivi technique, logistique et humain des programmes.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Commissariat aux Comptes -->
+      <div class="governance-card">
+        <div class="card-header">
+          <h3>Commissariat aux Comptes</h3>
+          <p class="org-type">Organe de contrôle</p>
+        </div>
+        <div class="card-body">
+          <img src="/asset/images/comptable.png" alt="Lansana Fofana" />
+          <h4>Lansana Fofana</h4>
+          <p class="role">Commissaire Principal</p>
+          <p class="bio">
+            Expert-comptable agréé, il conduit des audits trimestriels, valide les rapports financiers 
+            et garantit une gestion transparente des fonds de l’ONG.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <h2>Nous contacter</h2>
+    <div class="contact-flex">
+      <div class="contact-form animate-fade-in">
+        <!-- ✅ Formulaire lié à ton backend Node.js -->
+        <form id="contact-form" enctype="multipart/form-data" method="post">
+          <input type="text" name="nom" placeholder="Nom et Prénoms" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="telephone" placeholder="Téléphone" />
+        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+        
+        <!-- Champ pour uploader un fichier (CV ou photo) -->
+        <label for="file-upload" style="margin-top: 10px;">Joindre un fichier (CV ou photo) :</label>
+        <input type="file" id="file-upload" name="fichier" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" />
+        
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+    <div class="contact-info animate-fade-in-delay">
+      <h4>Coordonnées</h4>
+      <p>📍 Mamou, Guinée</p>
+      <p>📞 +224 622 12 34 56</p>
+      <p>📧 contact@apudep.org</p>
+      <p>🌐 www.apudep.org</p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="footer-container">
+    
+    <!-- Gauche : Logo + texte + copyright -->
+    <div class="footer-left">
+      <img src="/asset/images/logo.png" alt="Logo APUDEP" style="width: 60px; height: auto; margin-bottom: 10px;" />
+      <p style="font-size: 0.9em; line-height: 1.5;">ONG APUDEP - Protéger et valoriser les patrimoines en Guinée depuis 2014.</p>
+      <p class="footer-copy">&copy; 2025 APUDEP - Tous droits réservés.</p>
+    </div>
+
+    <!-- Centre : Liens de navigation -->
+    <div class="footer-center">
+      <h4>Navigation</h4>
+      <nav class="footer-links">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#actualites">Actualités</a></li>
+          <li><a href="#qui-sommes-nous">Qui sommes-nous ?</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Droite : Contact + réseaux -->
+    <div class="footer-right">
+      <h4>Nous contacter</h4>
+      <p>📍 Mamou, Guinée</p>
+      <p>📞 +224 622 12 34 56</p>
+      <p>📧 <a href="mailto:contact@apudep.org">contact@apudep.org</a></p>
+
+      <h4 style="margin-top: 20px;">Suivez-nous</h4>
+      <div class="footer-socials">
+        <a href="https://facebook.com/apudep" target="_blank">
+          <img src="asset/images/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://twitter.com/apudep" target="_blank">
+          <img src="asset/images/twitter.png" alt="Twitter" />
+        </a>
+      </div>
+    </div>
+    <li><a href="/asset/login.html" class="btn-admin">Connexion</a></li> <br>
+   
+  </div>
+</footer>
+
+
+
+
+
+  <!-- Inclure le client Socket.IO -->
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <script src="asset/js/index.js"></script>
+</body>
+</html>

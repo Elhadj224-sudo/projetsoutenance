@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion Admin - APUDEP</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/asset/css/login.css" />
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="login-illustration">
+      <div class="logo">
+        <img src="/asset/images/logo.png" alt="Logo APUDEP" class="logo-img" />
+      </div>
+      <h3>Bienvenue sur APUDEP</h3>
+      <p>Connectez-vous pour accéder à l'espace administrateur sécurisé.</p>
+    </div>
+
+    <div class="login-form-container">
+      <div class="form-content">
+        <h2>🔐 Connexion Administrateur</h2>
+        <form id="login-form">
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Adresse e-mail" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Mot de passe" required />
+          </div>
+          <button type="submit">Se connecter</button>
+        </form>
+        <p id="login-error" style="display: none;">Identifiants incorrects</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/asset/js/login.js"></script>
+</body>
+</html>

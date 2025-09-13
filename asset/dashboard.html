@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Admin - APUDEP</title>
+  <link rel="stylesheet" href="/asset/css/dashboard.css" />
+  
+</head>
+<body>
+  <header>
+    <h1>Tableau de bord Admin</h1>
+    <button id="logout">Déconnexion</button>
+  </header>
+
+  <main>
+    <!-- Barre de navigation -->
+    <nav id="dashboard-nav">
+      <ul>
+        <li><a href="#" id="news-tab" class="tab-link active">Actualités</a></li>
+        <li><a href="#" id="members-tab" class="tab-link">Membres</a></li>
+        <li><a href="#" id="messages-tab" class="tab-link">Messages</a></li>
+        <li><a href="#" id="experiences-tab" class="tab-link">Expériences</a></li>
+        <li><a href="#" id="partners-tab" class="tab-link">Partenaires</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <section id="content">
+      <!-- Section Actualités -->
+      <div id="news-section" class="tab-content active">
+        <h2>Gestion des actualités</h2>
+        <div class="button-wrapper">
+          <button id="add-news-btn" class="icon-button" title="Ajouter une actualité">➕</button>
+        </div>
+        <div id="news-list">Chargement...</div>
+      </div>
+
+      <!-- Section Membres -->
+      <div id="members-section" class="tab-content">
+        <h2>Gestion des membres</h2>
+        <div style="margin-bottom: 10px;">
+          <button id="add-member-btn">Ajouter un membre</button>
+        </div>
+        <div id="members-list">Chargement...</div>
+
+        <div id="member-form-container" style="display:none; margin-top: 20px;">
+          <h3 id="member-form-title">Ajouter / Modifier un membre</h3>
+          <form id="member-form" enctype="multipart/form-data">
+            <input type="hidden" id="member-id" name="id" />
+            <div>
+              <label for="member-name">Nom :</label><br />
+              <input type="text" id="member-name" name="name" required />
+            </div>
+            <div>
+              <label for="member-role">Rôle :</label><br />
+              <input type="text" id="member-role" name="role" required />
+            </div>
+            <div>
+              <label for="member-bio">Bio :</label><br />
+              <textarea id="member-bio" name="bio" rows="3" required></textarea>
+            </div>
+            <div>
+              <label for="member-img">Photo (optionnelle) :</label><br />
+              <input type="file" id="member-img" name="image" accept="image/*" />
+            </div>
+            <button type="submit">Enregistrer</button>
+            <button type="button" id="member-form-cancel">Annuler</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Section Messages -->
+      <div id="messages-section" class="tab-content">
+        <h2>Messages reçus</h2>
+        <div id="messages-list">Chargement...</div>
+      </div>
+
+      <!-- Section Expériences -->
+      <div id="experiences-section" class="tab-content">
+        <h2>Expériences</h2>
+
+        <div class="button-wrapper" style="margin-bottom: 15px;">
+          <button id="add-experience-btn" class="icon-button" title="Ajouter une expérience">➕</button>
+        </div>
+
+        <!-- Formulaire expérience -->
+        <form id="experience-form" enctype="multipart/form-data" style="margin-bottom: 20px; display: none;">
+          <input type="hidden" id="experience-id" name="id" />
+          <div>
+            <label for="experience-title">Titre :</label><br />
+            <input type="text" id="experience-title" name="title" required />
+          </div>
+          <div>
+            <label for="experience-description">Description :</label><br />
+            <textarea id="experience-description" name="description" rows="4" required></textarea>
+          </div>
+          <div>
+            <label for="experience-image">Image (optionnelle) :</label><br />
+            <input type="file" id="experience-image" name="image" accept="image/*" />
+          </div>
+          <button type="submit">Enregistrer</button>
+          <button type="button" id="experience-form-cancel">Annuler</button>
+        </form>
+
+        <div class="experiences-container">
+          <!-- Exemple d'expérience -->
+          <div class="experience-item">
+            <p>Titre de l'expérience</p>
+            <div class="action-buttons">
+              <button class="edit-experience">Modifier</button>
+              <button class="delete-experience">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Partenaires -->
+      <div id="partners-section" class="tab-content">
+        <h2>Partenaires</h2>
+
+        <div class="button-wrapper" style="margin-bottom: 15px;">
+          <button id="add-partner-btn" class="icon-button" title="Ajouter un partenaire">➕</button>
+        </div>
+
+        <!-- Formulaire partenaire -->
+        <form id="partner-form" enctype="multipart/form-data" style="margin-bottom: 20px; display: none;">
+          <input type="hidden" id="partner-id" name="id" />
+          <div>
+            <label for="partner-name">Nom :</label><br />
+            <input type="text" id="partner-name" name="name" required />
+          </div>
+          
+          <div>
+            <label for="partner-logo">Logo (optionnel) :</label><br />
+            <input type="file" id="partner-logo" name="image" accept="image/*" />
+          </div>
+          <button type="submit">Enregistrer</button>
+          <button type="button" id="partner-form-cancel">Annuler</button>
+        </form>
+
+        <div class="partners-container">
+          <!-- Exemple de partenaire -->
+          <div class="partner-item">
+            <p>Nom du partenaire</p>
+            <div class="action-buttons">
+              <button class="edit-partner">Modifier</button>
+              <button class="delete-partner">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Formulaire actualités -->
+  <div id="news-form-container" style="display:none;">
+    <div class="form-modal">
+      <h3 id="form-title">Ajouter une actualité</h3>
+      <form id="news-form" enctype="multipart/form-data">
+        <input type="hidden" id="news-id" name="id" />
+        <div>
+          <label for="title">Titre :</label><br />
+          <input type="text" id="title" name="title" required />
+        </div>
+        <div>
+          <label for="content">Contenu :</label><br />
+          <textarea id="content" name="content" rows="4" required></textarea>
+        </div>
+        <div>
+          <label for="newsImage">Image (optionnelle) :</label><br />
+          <input type="file" id="newsImage" name="image" accept="image/*" />
+        </div>
+        <div class="form-buttons">
+          <button type="submit">Enregistrer</button>
+          <button type="button" id="news-form-cancel">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="overlay"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>
