@@ -22,7 +22,17 @@
         <li><a href="#" id="messages-tab" class="tab-link">Messages</a></li>
         <li><a href="#" id="experiences-tab" class="tab-link">Expériences</a></li>
         <li><a href="#" id="partners-tab" class="tab-link">Partenaires</a></li>
+        <li><a href="#" id="dons-tab" class="tab-link">Messages de dons</a></li>
+
       </ul>
+
+      
+      
+
+
+      <div class="settings-button-container">
+        <button id="settings-btn">⚙️ Paramètres</button>
+      </div>
     </nav>
 
     <!-- Contenu principal -->
@@ -179,9 +189,34 @@
     </div>
   </div>
 
+  <!-- Modale Paramètres -->
+<div id="settings-modal" class="form-modal" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1001; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); max-width: 400px;">
+  <h3 style="margin-bottom: 1rem;">Paramètres</h3>
+  <form>
+    <div>
+      <label for="language">Langue :</label>
+      <select id="language">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div style="margin-top: 1rem;">
+      <label>
+        <input type="checkbox" id="dark-mode-toggle" />
+        Activer le mode sombre
+      </label>
+    </div>
+    <div class="form-buttons" style="margin-top: 1.5rem; justify-content: flex-end;">
+      <button type="button" id="close-settings">Fermer</button>
+    </div>
+  </form>
+</div>
+
+
   <div id="overlay"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
   <script src="./js/dashboard.js"></script>
+ 
 </body>
 </html>

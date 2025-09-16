@@ -1052,3 +1052,43 @@ html {
   height: auto;
   margin: 20px 0;
 }
+
+/* Section détails actualités */
+#news-details, #experience-details {
+  display: none; /* caché par défaut */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#news-details.active, #experience-details.active {
+  display: block;
+}
+
+/* Conteneur de l'image */
+#details-image, #experience-image {
+  width: 100%;      /* occupe toute la largeur du bloc */
+  height: 100%;     /* occupe toute la hauteur disponible */
+  object-fit: cover; /* image centrée et redimensionnée sans déformer */
+  display: block;
+  border-radius: 8px; /* optionnel : arrondir les coins */
+}
+
+/* Optionnel : mettre le contenu texte en dessous de l'image */
+#details-content, #experience-description {
+  margin-top: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+.dropdown:hover .dropdown-menu { display: block; }
+
+/* Dropdown mobile */
+.dropdown-menu {
+  display: none;
+  flex-direction: column; /* vertical sur mobile */
+}
+
+.dropdown-menu.active {
+  display: flex;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faire un don - APUDEP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./asset/css/don.css">
+
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="don-container">
+      <!-- Partie gauche : photo avec overlay -->
+      <div class="don-left">
+        <img src="asset/images/adresse.png" alt="Adresse de l'ONG APUDEP">
+        <div class="don-left-overlay">
+          <h1>Soutenir APUDEP</h1>
+          <p>Votre don fait la différence. Contribuez à nos actions et aidez-nous à créer un impact positif dans la communauté.</p>
+        </div>
+      </div>
+
+      <!-- Partie droite : formulaire -->
+      <div class="don-right">
+        <div class="logo-container">
+          <div class="logo">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h2>Faire un don</h2>
+          <p>Remplissez le formulaire ci-dessous pour nous soutenir</p>
+        </div>
+
+        <form id="don-form" class="don-form">
+          <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="nom" placeholder="Nom" required />
+          </div>
+          
+          <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="prenom" placeholder="Prénom" required />
+          </div>
+          
+          <div class="form-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          
+          <div class="form-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" name="telephone" placeholder="Téléphone" required />
+          </div>
+          
+          <div class="form-group">
+            <i class="fas fa-gift"></i>
+            <input type="text" name="nature" placeholder="Nature du don" required />
+          </div>
+          
+          <div class="form-group">
+            <i class="fas fa-comment"></i>
+            <textarea name="message" placeholder="Votre message (optionnel)"></textarea>
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="autorisation" name="autorisation" required />
+            <label for="autorisation">J'autorise APUDEP à me contacter concernant ce don et j'accepte la <a href="#">politique de confidentialité</a>.</label>
+          </div>
+
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i>
+            Envoyer
+          </button>
+        </form>
+
+        <div id="don-output"></div>
+      </div>
+    </div>
+  </div>
+
+ <script src="./js/don.js"></script>
+
+</body>
+</html>
